@@ -1,0 +1,711 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* BODY */
+body {
+    font-family: Arial, sans-serif;
+    color: #263238;
+    background-color: #FAF6EE;
+    line-height: 1.6;
+}
+/* NAVIGATION */
+header {
+    background-color: #17324D;
+    color: white;
+    padding: 15px 25px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav h1 {
+    color: #D89B2B;
+    font-family: Georgia, serif;
+    font-size: 30px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+nav a:hover {
+    color: #D89B2B;
+}
+/* HERO */
+.hero {
+    height: 500px;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)
+        ),
+        url("images/back.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    text-align: left;
+    color: white;
+
+    padding-left: 8%;
+}
+.hero-content h2 {
+    font-family: Georgia, serif;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+.btn {
+    display: inline-block;
+    background-color: #D89B2B;
+    color: white;
+    padding: 12px 22px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.btn:hover {
+    background-color: #B77916;
+}
+/* GENERAL SECTIONS */
+section {
+    padding: 60px 8%;
+    text-align: center;
+}
+section h2 {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+/* DESTINATIONS */
+#destinations {
+    padding-left: 4%;
+    padding-right: 4%;
+}
+.destination-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+
+    max-width: 1100px;
+    margin: auto;
+}
+.card {
+    background-color: white;
+    width: 250px;
+
+    padding-bottom: 20px;
+
+    border-radius: 8px;
+    overflow: hidden;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+.card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+.card h3 {
+    margin-top: 15px;    font-family: Georgia, serif;
+}
+.card p {
+    margin: 5px 0 12px;
+    font-size: 14px;
+}
+/* DESTINATION RATING */
+.destination-rating {
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #D89B2B;
+}
+.destination-rating span {
+    color: #263238;
+}
+/* LOCATION BUTTON */
+.location-btn {
+    background-color: #D89B2B;
+    color: white;
+
+    border: none;
+    padding: 9px 14px;
+
+    border-radius: 5px;
+    cursor: pointer;
+
+    font-size: 14px;
+}
+.location-btn:hover {
+    background-color: #B77916;
+}
+.gallery-button {
+    margin-top: 30px;
+
+    padding: 12px 25px;
+
+    background-color: #17324D;
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+    font-size: 15px;
+}
+.gallery-button:hover {
+    background-color: #D89B2B;
+}
+.travel-gallery {
+    display: none;
+
+    margin-top: 30px;
+
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+.travel-gallery.show {
+    display: grid;
+}
+.travel-gallery img {
+    width: 100%;
+    height: 170px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+}
+
+/* ABOUT YĀTRĀ */
+.about {
+    background-color: #F1E6D2;
+
+    padding: 80px 8%;
+
+    overflow: hidden;
+}
+.about-content {
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 500px;
+}
+.about-text {
+    width: 50%;
+
+    z-index: 2;
+
+    text-align: left;
+}
+.about-label {
+    color: #D89B2B;
+
+    font-size: 14px;
+
+    letter-spacing: 3px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+.about-text h2 {
+    font-family: Georgia, serif;
+
+    font-size: 52px;
+
+    color: #263238;
+
+    margin-bottom: 15px;
+}
+.about-text h2 span {
+    color: #D89B2B;
+}
+.about-text h3 {
+    font-family: Georgia, serif;
+
+    font-size: 24px;
+
+    font-weight: normal;
+
+    color: #263238;
+
+    margin-bottom: 25px;
+}
+.about-text p {
+    max-width: 550px;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    color: #37474F;
+
+    margin-bottom: 15px;
+}
+.about-btn {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 13px 22px;
+
+    background-color: #D89B2B;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+}
+.about-btn:hover {
+    background-color: #B77916;
+}
+
+/* ABOUT IMAGE */
+
+.about-image {
+    width: 60%;
+
+    margin-left: -5%;
+}
+.about-image img {
+    width: 100%;
+    height: 500px;
+
+    object-fit: cover;
+
+    -webkit-mask-image:
+        linear-gradient(
+            to right,
+            transparent 0%,
+            black 25%,
+            black 100%
+        );
+
+    mask-image:
+        linear-gradient(
+            to right,
+            transparent 0%,
+            black 25%,
+            black 100%
+        );
+}
+
+/* CONTACT */
+#contact {
+    background-color: #17324D;
+
+    color: white;
+
+    padding: 70px 8%;
+
+    text-align: center;
+}
+#contact h2 {
+    color: #D89B2B;
+
+    font-family: Georgia, serif;
+
+    font-size: 36px;
+
+    margin-bottom: 30px;
+}
+form {
+    max-width: 500px;
+
+    margin: auto;
+}
+form input,
+form textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    margin: 8px 0;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 15px;
+}
+form textarea {
+    height: 120px;
+
+    resize: none;
+}
+#contact button {
+    background-color: #D89B2B;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 25px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+#contact button:hover {
+    background-color: #B77916;
+}
+/* FOOTER */
+footer {
+    background-color: #263238;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+}
+footer p {
+    font-size: 14px;
+}
+/* TABLET + MOBILE */
+
+@media (max-width: 768px) {
+
+    /* GENERAL */
+    body {
+        width: 100%;
+        overflow-x: hidden;
+        font-size: 16px;
+    }
+    section {
+        padding: 45px 20px;
+    }
+    /* NAVIGATION */
+    header {
+        padding: 12px 15px;
+    }
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+    nav h1 {
+        font-size: 27px;
+    }
+    nav ul {
+        gap: 16px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+    nav a {
+        font-size: 14px;
+    }
+    /* HERO */
+    .hero {
+        height: 430px;
+
+        padding: 30px 20px;
+
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
+
+        background-position: center;
+    }
+    .hero-content {
+        width: 100%;
+    }
+    .hero-content h2 {
+        font-size: 40px;
+
+        line-height: 1.1;
+
+        margin-bottom: 12px;
+    }
+    .hero-content p {
+        font-size: 17px;
+
+        line-height: 1.5;
+
+        margin-bottom: 25px;
+    }
+    .btn {
+        display: inline-block;
+
+        padding: 12px 20px;
+
+        font-size: 15px;
+    }
+    /* SECTION HEADINGS */
+    section h2 {
+        font-size: 30px;
+
+        line-height: 1.2;
+
+        margin-bottom: 25px;
+    }
+    /* DESTINATIONS */
+    #destinations {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .destination-container {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 20px;
+
+        width: 100%;
+    }
+    .card {
+        width: 100%;
+
+        max-width: 330px;
+
+        padding-bottom: 18px;
+    }
+    .card img {
+        width: 100%;
+
+        height: 190px;
+
+        object-fit: cover;
+    }
+    .card h3 {
+        font-size: 20px;
+
+        margin-top: 13px;
+    }
+    .card p {
+        font-size: 14px;
+
+        margin: 5px 10px 10px;
+    }
+    .destination-rating {
+        font-size: 14px;
+
+        margin-bottom: 10px;
+    }
+    .location-btn {
+        min-height: 42px;
+
+        padding: 10px 16px;
+
+        font-size: 14px;
+    }
+    /* GALLERY */
+    .gallery-button {
+        margin-top: 25px;
+
+        min-height: 44px;
+
+        padding: 11px 22px;
+
+        font-size: 15px;
+    }
+    .travel-gallery {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 8px;
+
+        margin-top: 20px;
+    }
+    .travel-gallery img {
+        width: 100%;
+
+        height: 135px;
+
+        object-fit: cover;
+
+        border-radius: 7px;
+    }
+    /* ABOUT YĀTRĀ  */
+
+    .about {
+        padding: 55px 20px;
+    }
+    .about-content {
+        flex-direction: column;
+
+        min-height: auto;
+
+        width: 100%;
+    }
+    .about-text {
+        width: 100%;
+
+        text-align: left;
+    }
+    .about-label {
+        font-size: 12px;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 12px;
+    }
+    .about-text h2 {
+        font-size: 38px;
+
+        line-height: 1.15;
+
+        margin-bottom: 15px;
+    }
+    .about-text h3 {
+        font-size: 20px;
+
+        line-height: 1.4;
+
+        margin-bottom: 20px;
+    }
+    .about-text p {
+        max-width: none;
+
+        font-size: 15px;
+
+        line-height: 1.7;
+
+        margin-bottom: 15px;
+    }
+    .about-btn {
+        margin-top: 10px;
+
+        padding: 12px 18px;
+
+        font-size: 14px;
+    }
+    /* ABOUT IMAGE MOBILE */
+    .about-image {
+        width: 100%;
+
+        margin: 30px 0 0 0;
+    }
+    .about-image img {
+        width: 100%;
+
+        height: 280px;
+
+        object-fit: cover;
+
+        /* Remove desktop fade */
+        -webkit-mask-image: none;
+        mask-image: none;
+    }
+    /* CONTACT MOBILE */
+    #contact {
+        padding: 55px 20px;
+    }
+    #contact h2 {
+        font-size: 30px;
+
+        margin-bottom: 25px;
+    }
+    form {
+        width: 100%;
+
+        max-width: 420px;
+    }
+    form input,
+    form textarea {
+        width: 100%;
+
+        font-size: 16px;
+
+        padding: 13px;
+
+        margin: 7px 0;
+    }
+
+    form textarea {
+        height: 120px;
+    }
+    #contact button {
+        min-height: 44px;
+
+        padding: 11px 22px;
+
+        font-size: 15px;
+    }
+    /* FOOTER MOBILE */
+    footer {
+        padding: 18px 15px;
+    }
+    footer p {
+        font-size: 13px;
+    }
+    .footer-contact {
+    margin-top: 8px;
+    font-size: 14px;
+}
+}
+
+/* SMALL PHONES */
+@media (max-width: 380px) {
+
+    /* NAVIGATION */
+    nav h1 {
+        font-size: 25px;
+    }
+    nav ul {
+        gap: 10px;
+    }
+    nav a {
+        font-size: 13px;
+    }
+    /* HERO */
+
+    .hero {
+        height: 400px;
+    }
+    .hero-content h2 {
+        font-size: 34px;
+    }
+    .hero-content p {
+        font-size: 15px;
+    }
+    /* DESTINATION CARD */
+
+    .card {
+        max-width: 310px;
+    }
+    .card img {
+        height: 175px;
+    }
+    /* GALLERY */
+    .travel-gallery img {
+        height: 115px;
+    }
+    /* ABOUT */
+    .about-text h2 {
+        font-size: 34px;
+    }
+    .about-text h3 {
+        font-size: 18px;
+    }
+    .about-image img {
+        height: 240px;
+    }
+}
